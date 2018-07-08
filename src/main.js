@@ -3,6 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store/index.js'
+// import Vuex from 'vuex'
+// Vue.use(Vuex)
 
 Vue.config.productionTip = false
 import 'video.js/dist/video-js.css'
@@ -12,6 +15,7 @@ window.videoPlayers = []
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
