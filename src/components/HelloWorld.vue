@@ -1,5 +1,7 @@
 <template>
   <div class="main-box">
+    <h2>音乐测试</h2>
+    <button @click="toPage"> click me</button>
     <div class="section" v-for='(v,k) in videoArr'>
       <videoplayer1 :poster="v.poster" :src="v.src"></videoplayer1>
     </div>
@@ -29,6 +31,10 @@ import videoplayer1 from './videoplayer.vue'
             poster: "http://video.ivwen.com/users/5291192/1530770605799.mp4?vframe/jpg/offset/0"
         },
         ]
+      }
+    },methods:{
+      toPage(){
+        this.$router.push("/vuextest")
       }
     }
   }
